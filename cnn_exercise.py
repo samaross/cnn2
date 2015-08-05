@@ -59,11 +59,9 @@ for _ in range(1000):
         print 'Image Row: %s' % image_row
         print 'Image Column: %s' % image_col
         print 'Convolved feature: %0.5f' % convolved_feature
+        print 'Test feature: %0.5f' % feature
         exit("Convolved feature does not match test feature")
-    else:
-        print "Congratulations! Your convolution code passes the test"
-
-
+        
 ##======================================================================
 ## STEP 2: Implement and test pooling
 #  Implement pooling in the function cnnPool in cnnPool.m
@@ -91,8 +89,9 @@ if not (pooled_features == expected_matrix).all():
     print expected_matrix
     print "Got"
     print pooled_features
-else:
-    print 'Congratulations! Your pooling code passed the test.'
+    exit("Pooling code failed")
+
+print 'Congratulations! Your code passed the test.'
     
               
     
